@@ -1,3 +1,4 @@
+# Jumper Game
 '''RULES'''
 '''The puzzle is a secret word randomly chosen from a list.
 The player guesses a letter in the puzzle.
