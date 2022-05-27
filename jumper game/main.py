@@ -10,7 +10,7 @@ def main():
 
     word = words.get_word()
     jumper = Game(word)
-    while not parachute.game_over() and not jumper.correct_guess(""):
+    while not parachute.game_over() and not jumper.correct_guess():
 
         jumper.print_board()
         parachute.draw_parachute()
@@ -19,7 +19,12 @@ def main():
         jumper.check_guess(guess)
         if jumper.incorrect_guess(guess):
             parachute.delete_segment()
-    person.person_dead()
+    if parachute.game_over():
+        person.person_dead()
+        print("You lost")
+    else:
+        jumper.print_board()
+        print("You won")
 
 
 main()

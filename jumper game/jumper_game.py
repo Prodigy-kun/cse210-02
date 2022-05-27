@@ -1,3 +1,6 @@
+from timeit import repeat
+
+
 class Game:
     def __init__(self, word):
         """
@@ -7,7 +10,9 @@ class Game:
         :param word: the word to guess.
         """
         self._word = word
-        self.board = "_ _ _ _ _"
+        self.board = []
+        for i in range(len(word)):
+            self.board.append("_ ")
 
         
     def check_guess(self, guess):
@@ -17,20 +22,29 @@ class Game:
         Args:
             guess (_str_): word given from user
         """
-        word = ""
-        for i in range(len(guess)):
-            if guess[i] == self._word[i]:
+
+        for i in range(len(self._word)):
+            if guess == self._word[i]:
                 #print(f"{guess[i]} ", end = "")
-                word += f"{guess[i]} "
-            else:
-                #print("_ ", end ="")
-                word += "_ "
-        self.board = word
-        print()
-        
+                self.board.pop(i)
+                self.board.insert(i, f"{guess} ")
+
     def print_board(self):
         # Display the starting board and correctly guessed letters after user guesses
-        print(self.board)
+        for x in range(len(self.board)):
+            print (self.board[x], end=" ")
+        print()
+
+    def incorrect_guess(self, guess):
+        if guess not in self._word:
+            return True
          
+    def correct_guess(self):
+        board = ""
+        for i in range(len(self.board)):
+            board += self.board[i].strip(" ")
+        if board == self._word:
+            return True
+
                 
 
