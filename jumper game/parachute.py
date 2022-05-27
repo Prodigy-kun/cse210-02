@@ -21,9 +21,10 @@ class parachute:
      Delete one segment
     '''
     def delete_segment(self):
-        self._draw.pop(1)
+        self._draw.pop(0)
 
         '''True if there is no more parachute'''
     def game_over(self):
         return self._draw == []
+
 
