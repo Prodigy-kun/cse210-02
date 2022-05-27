@@ -27,6 +27,7 @@ def main():
         print("You won")
 
 
-main()
+if __name__=="__main__":
+    main()
 
 
