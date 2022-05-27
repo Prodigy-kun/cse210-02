@@ -12,7 +12,7 @@ class Draw_person:
         print('  /|\\')
         print('  / \\')
 
-    def persom_dead(self):
+    def person_dead(self):
         """Args:
             self (Die): An instance of Die.
         """

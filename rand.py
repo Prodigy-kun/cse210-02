@@ -5,7 +5,7 @@ def main():
     a = Alphabet()
     b = a.make_dash()
 
-    print()
+    print(b)
     print()
     print()
 

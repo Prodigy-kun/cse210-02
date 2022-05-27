@@ -1,4 +1,4 @@
-class parachute:
+class Parachute:
     '''
     Initial drawing: 
       ___
@@ -8,7 +8,7 @@ class parachute:
 
     '''
     def __init__(self) -> None:
-        self._draw = [" ___","/___\\","\\   /"," \\ /"]
+        self._draw = ["  ___"," /___\\"," \\   /","  \\ /"]
 
     '''
      Draw parachute
