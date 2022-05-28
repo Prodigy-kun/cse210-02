@@ -11,6 +11,7 @@ class Draw_person:
         print('   0   ')
         print('  /|\\')
         print('  / \\')
+        print('^^^^^^^^')
 
     def person_dead(self):
         """Args:
@@ -20,5 +21,6 @@ class Draw_person:
         print('   x   ')
         print('  /|\\')
         print('  / \\')
+        print('^^^^^^^^')
 
 
