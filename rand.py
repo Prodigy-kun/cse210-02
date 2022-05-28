@@ -4,6 +4,7 @@ import random
 def main():
     a = Alphabet()
     b = a.make_dash()
+    c =
 
     print()
     print()
@@ -20,6 +21,9 @@ class Alphabet:
             self.dash.append('_')
         return self.dash
 
+    def print_dash(self):
+        for dash in self.dash:
+            print('-', end='')
 
 class Terminal_service:
     def __init__(self):
