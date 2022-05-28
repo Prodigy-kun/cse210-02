@@ -6,7 +6,7 @@ def main():
     b = a.make_dash()
     c =
 
-    print()
+    print(b)
     print()
     print()
 

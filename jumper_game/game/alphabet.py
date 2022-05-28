@@ -17,7 +17,7 @@ Tim
 """
 alphabet = []
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-class alphabet:
+class Alphabet:
     def alphabet():
         if alphabet == alphabet: 
             print(keep line)

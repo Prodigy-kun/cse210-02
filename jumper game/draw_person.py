@@ -11,8 +11,8 @@ class Draw_person:
         print('   0   ')
         print('  /|\\')
         print('  / \\')
-        print('^^^^^^^')
-    def persom_dead(self):
+
+    def person_dead(self):
         """Args:
             self (Die): An instance of Die.
         """
@@ -20,6 +20,5 @@ class Draw_person:
         print('   x   ')
         print('  /|\\')
         print('  / \\')
-        print('^^^^^^^')
 
 

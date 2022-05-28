@@ -1,4 +1,4 @@
-class parachute:
+class Parachute:
     '''
     Initial drawing: 
       ___
@@ -8,7 +8,7 @@ class parachute:
 
     '''
     def __init__(self) -> None:
-        self._draw = [" ___","/___\\","\\   /"," \\ /"]
+        self._draw = ["  ___"," /___\\"," \\   /","  \\ /"]
 
     '''
      Draw parachute
@@ -21,9 +21,10 @@ class parachute:
      Delete one segment
     '''
     def delete_segment(self):
-        self._draw.pop(1)
+        self._draw.pop(0)
 
         '''True if there is no more parachute'''
     def game_over(self):
         return self._draw == []
+
 
