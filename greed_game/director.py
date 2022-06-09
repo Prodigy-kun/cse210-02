@@ -1,7 +1,7 @@
-from game.shared.color import Color
-from game.shared.point import Point
-from game.casting.artifact import Gem
-from game.casting.rock import Rock
+from color import Color
+from point import Point
+from gem import Gem
+from rock import Rock
 
 import random
 CELL_SIZE = 15
