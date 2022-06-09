@@ -27,6 +27,15 @@ class VideoService:
         pyray.set_target_fps(self._frame_rate)
 
 
+    def is_window_open(self):
+            """Whether or not the window was closed by the user.
+
+            Returns:
+                bool: True if the window is closing; false if otherwise.
+            """
+            return not pyray.window_should_close()
+
+
     def close_window(self):
         """Closes the window and releases all computing resources."""
         pyray.close_window()
@@ -54,4 +63,13 @@ class VideoService:
         the game's output phase.
         """ 
         pyray.end_drawing()
-    
+
+
+    def get_width(self):
+        """Gets the video screen's width.
+        
+        Returns:
+            Grid: The video screen's width.
+        """
+        return self._width
+

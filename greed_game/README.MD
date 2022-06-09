@@ -1,3 +1,32 @@
+# GREED GAME
+Greed is a game in which the player seeks to gather as many falling gems as possible. The game continues as long as the player wants more!
+
+# RULES
+'''Gems (*) and rocks (o) randomly appear and fall from the top of the screen.
+The player (#) can move left or right along the bottom of the screen.
+If the player touches a gem they earn a point.
+If the player touches a rock they lose a point.
+Gems and rocks are removed when the player touches them.
+The game continues until the player closes the window.'''
+
+'''Requirements'''
+'''The program must include a README file.
+The program must include class and method comments.
+The program must remain true to game play described in the overview.'''
+
+'''Required Technologies'''
+'''Python 3.8.0'''
+
+# Authors
+'''
+Tim Smith
+Kevin del Hoyo
+Omotayo Promise
+Robert Elliott
+'''
+
+# classes and outline
+
 class Actor()
     Parent class of Gems and rocks
     Kevin
