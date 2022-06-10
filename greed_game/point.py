@@ -49,7 +49,7 @@ class Point:
         Returns:
             integer: The horizontal distance.
         """
-        return self._x
+        return int(self._x)
 
     def get_y(self):
         """Gets the vertical distance.
@@ -57,7 +57,7 @@ class Point:
         Returns:
             integer: The vertical distance.
         """
-        return self._y
+        return int(self._y)
 
     def scale(self, factor):
         """

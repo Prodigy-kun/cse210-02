@@ -72,4 +72,26 @@ class VideoService:
             Grid: The video screen's width.
         """
         return self._width
+    
+    def draw_actor(self, actor):
+        """Draws the given actor's text on the screen.
+
+        Args:
+            actor (Actor): The actor to draw.
+        """ 
+        text = actor.get_text()
+        x = actor.get_position().get_x()
+        y = actor.get_position().get_y()
+        font_size = actor.get_font_size()
+        color = actor.get_color().to_tuple()
+        pyray.draw_text(text, x, y, font_size, color)
+        
+    def draw_actors(self, actors):
+        """Draws the text for the given list of actors on the screen.
+
+        Args:
+            actors (list): A list of actors to draw.
+        """ 
+        for actor in actors:
+            self.draw_actor(actor)
 

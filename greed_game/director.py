@@ -53,9 +53,9 @@ class Director:
         Args:
             cast (Cast): The cast of actors.
         """
-        robot = cast.get_first_actor("robots")
+        player = cast.get_first_actor("players")
         velocity = self._keyboard_service.get_direction()
-        robot.set_velocity(velocity)        
+        player.set_velocity(velocity)        
 
     def _draw_points(self, cast):
         banner = cast.get_first_actor("banners")
@@ -67,15 +67,15 @@ class Director:
         Args:
             cast (Cast): The cast of actors.
         """
-        robot = cast.get_first_actor("robots")
+        player = cast.get_first_actor("players")
         gems = cast.get_actors("gems")
         rocks = cast.get_actors("rocks")
         max_x = self._video_service.get_width()
-        robot.move_x(max_x)
+        player.move_x(max_x)
         y_speed = 5
         for gem in gems:
             gem.move_y(y_speed)
-            if robot.get_position().equals(gem.get_position()):
+            if player.get_position().equals(gem.get_position()):
                 self._points += 1
                 cast.remove_actor("gems", gem)
             if gem.get_y() > MAX_Y:
@@ -83,7 +83,7 @@ class Director:
                 
         for rock in rocks:
             rock.move_y(y_speed)
-            if robot.get_position().equals(rock.get_position()):
+            if player.get_position().equals(rock.get_position()):
                 self._points -= 1
                 cast.remove_actor("rocks", rock)
             if rock.get_y() > MAX_Y:
