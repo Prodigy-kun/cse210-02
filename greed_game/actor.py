@@ -27,9 +27,7 @@ class Actor:
         from one side of the screen to the other when it reaches the given y value.
         """
         x = self._position.get_x()
-        y = self._position.get_y() - speed
-        self._position = Point(x, y)
-        #Just in case we don't want to remove the actor when it is at the bottom
+        y = self._position.get_y() + speed
         self._position = Point(x, y)
 
     def set_color(self, color):
