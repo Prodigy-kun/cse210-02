@@ -78,7 +78,7 @@ class Director:
             if player.get_position().equals(gem.get_position()):
                 self._points += 1
                 cast.remove_actor("gems", gem)
-            if gem.get_y() > MAX_Y:
+            if gem._position.get_y() > MAX_Y:
                 cast.remove_actor("gems", gem)
                 
         for rock in rocks:
@@ -86,8 +86,9 @@ class Director:
             if player.get_position().equals(rock.get_position()):
                 self._points -= 1
                 cast.remove_actor("rocks", rock)
-            if rock.get_y() > MAX_Y:
+            if rock._position.get_y() > MAX_Y:
                 cast.remove_actor("rocks", rock)
+
         
     def _do_outputs(self, cast):
         """Draws the actors on the screen.
@@ -101,7 +102,7 @@ class Director:
         self._video_service.flush_buffer()
         
     def _draw_objects(self, cast):
-        if len(cast.get_all_actors()) < MAX_OBJECTS:
+        if (len(cast.get_actors("gems")) < (MAX_OBJECTS/2)) and (len(cast.get_actors("rocks")) < (MAX_OBJECTS/2)):
             x = random.randint(1, COLS - 1)
             y = random.randint(1, ROWS / 2)
             position = Point(x, y)
