@@ -22,17 +22,15 @@ class Actor:
     def get_velocity(self):
         return self._velocity
     
-    def move_y(self, max_y):
+    def move_y(self, speed):
         """Moves the actor to its next position according to its velocity. Will wrap the position 
         from one side of the screen to the other when it reaches the given y value.
         """
-        if (self._position.get_y() <= max_y) and (self._position.get_y() >= 0):
-            x = self._position.get_x()
-            y = self._position.get_y() - self._velocity
-            self._position = Point(x, y)
-        else:
-            #Just in case we don't want to remove the actor when it is at the bottom
-            self._position = Point(x, max_y)
+        x = self._position.get_x()
+        y = self._position.get_y() - speed
+        self._position = Point(x, y)
+        #Just in case we don't want to remove the actor when it is at the bottom
+        self._position = Point(x, y)
 
     def set_color(self, color):
         self._color = color
