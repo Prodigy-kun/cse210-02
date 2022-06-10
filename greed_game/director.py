@@ -124,9 +124,9 @@ class Director:
             position = Point(x, y)
             position = position.scale(CELL_SIZE)
             
-            r = random.randint(0, 255)
-            g = random.randint(0, 255)
-            b = random.randint(0, 255)
+            r = 165
+            g = 42
+            b = 42
             color = Color(r, g, b)
             rock = Rock()
             rock.set_text("O")
