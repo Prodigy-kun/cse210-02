@@ -1,6 +1,6 @@
 from color import Color
 from point import Point
-from gemt import Gem
+from gem import Gem
 from rock import Rock
 
 import random
