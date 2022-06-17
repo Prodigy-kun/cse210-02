@@ -1,28 +1,7 @@
 Readme file
 
-(Kevin)
-    class actor()
-        copy from snake game
 
-(Promise)
-    class snake(Actor)
-        COPY
-
-(Kevin)
-    class score(Actor)
-         COPY 
-
-(Robert)
-    class Cast
-        see snake game
-
-(Kevin)
-    class director
-
-(Robert)
-    class Action
-
-(Tim)
+Tim:
     class ControlActorsAction(Action)
 
     Copy from game
@@ -35,19 +14,39 @@ Readme file
 
     class MoveActorsAction(Action)
 
-(Promise)
+Promise:
+    
+    class snake(Actor)
+        COPY
+
     class Script
 
     class KeyboardService
 
     class VideoService
 
-(Robert)
+Robert:
     class Color
 
     class Point
 
-(Kevin)
+    
+    class Cast
+        see snake game
+
+    
+    class Action
+
+Kevin:
     class Game_over
         display a message
         return true when the game is over
+
+    class actor()
+        copy from snake game
+
+    class score(Actor)
+         COPY 
+
+    class director
+
