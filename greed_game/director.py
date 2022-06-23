@@ -53,9 +53,9 @@ class Director:
         Args:
             cast (Cast): The cast of actors.
         """
-        robot = cast.get_first_actor("robots")
+        player = cast.get_first_actor("players")
         velocity = self._keyboard_service.get_direction()
-        robot.set_velocity(velocity)        
+        player.set_velocity(velocity)        
 
     def _draw_points(self, cast):
         banner = cast.get_first_actor("banners")
@@ -67,27 +67,28 @@ class Director:
         Args:
             cast (Cast): The cast of actors.
         """
-        robot = cast.get_first_actor("robots")
+        player = cast.get_first_actor("players")
         gems = cast.get_actors("gems")
         rocks = cast.get_actors("rocks")
         max_x = self._video_service.get_width()
-        robot.move_x(max_x)
+        player.move_x(max_x)
         y_speed = 5
         for gem in gems:
             gem.move_y(y_speed)
-            if robot.get_position().equals(gem.get_position()):
+            if player.get_position().equals(gem.get_position()):
                 self._points += 1
                 cast.remove_actor("gems", gem)
-            if gem.get_y() > MAX_Y:
+            if gem._position.get_y() > MAX_Y:
                 cast.remove_actor("gems", gem)
                 
         for rock in rocks:
             rock.move_y(y_speed)
-            if robot.get_position().equals(rock.get_position()):
+            if player.get_position().equals(rock.get_position()):
                 self._points -= 1
                 cast.remove_actor("rocks", rock)
-            if rock.get_y() > MAX_Y:
+            if rock._position.get_y() > MAX_Y:
                 cast.remove_actor("rocks", rock)
+
         
     def _do_outputs(self, cast):
         """Draws the actors on the screen.
@@ -101,7 +102,7 @@ class Director:
         self._video_service.flush_buffer()
         
     def _draw_objects(self, cast):
-        if len(cast.get_all_actors()) < MAX_OBJECTS:
+        if (len(cast.get_actors("gems")) < (MAX_OBJECTS/2)) and (len(cast.get_actors("rocks")) < (MAX_OBJECTS/2)):
             x = random.randint(1, COLS - 1)
             y = random.randint(1, ROWS / 2)
             position = Point(x, y)
@@ -124,9 +125,9 @@ class Director:
             position = Point(x, y)
             position = position.scale(CELL_SIZE)
             
-            r = random.randint(0, 255)
-            g = random.randint(0, 255)
-            b = random.randint(0, 255)
+            r = 165
+            g = 42
+            b = 42
             color = Color(r, g, b)
             rock = Rock()
             rock.set_text("O")

@@ -1,3 +1,5 @@
+from point import Point
+
 class Player:
     def move_player(self, max_x, max_y):
         """Moves the player to its next position using the x and y values
