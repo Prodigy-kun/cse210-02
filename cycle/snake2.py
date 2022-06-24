@@ -1,4 +1,4 @@
-import cycle.constants as constants
+import constants as constants
 from actor import Actor
 from point import Point
 

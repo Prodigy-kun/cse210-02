@@ -1,5 +1,5 @@
 import pyray
-import cycle.constants as constants
+import constants as constants
 
 
 class VideoService:
