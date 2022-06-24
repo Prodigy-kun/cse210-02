@@ -1,7 +1,7 @@
 import constants as constants
 from actor import Actor
 from point import Point
-
+import random
 
 class Snake2(Actor):
     """
@@ -52,8 +52,8 @@ class Snake2(Actor):
         self._segments[0].set_velocity(velocity)
     
     def _prepare_body(self):
-        x = int(constants.MAX_X / 2)
-        y = int(constants.MAX_Y / 2)
+        x = int(constants.MAX_X / random.randint(6, 10))
+        y = int(constants.MAX_Y / random.randint(6, 10))
 
         for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)

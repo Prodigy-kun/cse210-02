@@ -29,10 +29,11 @@ class DrawActorsAction(Action):
         score = cast.get_first_actor("scores")
         snake2 = cast.get_first_actor("snakes2")
         snake = cast.get_first_actor("snakes")
+        
         segments = snake.get_segments()
-        snake.set_position(Point(200, 300))
+
         segments2 = snake2.get_segments()
-        snake2.set_position(Point(450, 100))
+
         messages = cast.get_actors("messages")
 
         self._video_service.clear_buffer()

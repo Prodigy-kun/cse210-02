@@ -20,11 +20,12 @@ class KeyboardService:
         self._keys['s'] = pyray.KEY_S
         self._keys['d'] = pyray.KEY_D
 
-        self._keys2 = {}
-        self._keys2['i'] = pyray.KEY_I
-        self._keys2['j'] = pyray.KEY_J
-        self._keys2['k'] = pyray.KEY_K
-        self._keys2['l'] = pyray.KEY_L
+        #self._keys2 = {}
+        
+        self._keys['i'] = pyray.KEY_I
+        self._keys['j'] = pyray.KEY_J
+        self._keys['k'] = pyray.KEY_K
+        self._keys['l'] = pyray.KEY_L
 
     def is_key_up(self, key):
         """Checks if the given key is currently up.
@@ -33,7 +34,7 @@ class KeyboardService:
             key (string): The given key (w, a, s, d or i, j, k, l)
         """
         pyray_key = self._keys[key.lower()]
-        pyray_key = self._keys2[key.lower()]
+        #pyray_key = self._keys2[key.lower()]
         return pyray.is_key_up(pyray_key) 
 
     def is_key_down(self, key):
@@ -43,5 +44,5 @@ class KeyboardService:
             key (string): The given key (w, a, s, d or i, j, k, l)
         """
         pyray_key = self._keys[key.lower()]
-        pyray_key = self._keys2[key.lower()]
+        #pyray_key = self._keys2[key.lower()]
         return pyray.is_key_down(pyray_key)

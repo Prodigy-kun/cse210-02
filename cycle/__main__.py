@@ -5,6 +5,7 @@ from score import Score
 from snake import Snake
 from script import Script
 from control_actors_action import ControlActorsAction
+from control_actors_action2 import ControlActorsAction2
 from move_actors_action import MoveActorsAction
 from handle_collisions_action import HandleCollisionsAction
 from draw_actors_action import DrawActorsAction
@@ -13,14 +14,14 @@ from keyboard_service import KeyboardService
 from video_service import VideoService
 from color import Color
 from point import Point
-
+from snake2 import Snake2
 
 def main():
     
     # create the cast
     cast = Cast()
     cast.add_actor("snakes", Snake())
-    cast.add_actor("snakes2", Snake())
+    cast.add_actor("snakes2", Snake2())
     cast.add_actor("scores", Score())
    
     # start the game
@@ -29,6 +30,7 @@ def main():
 
     script = Script()
     script.add_action("input", ControlActorsAction(keyboard_service))
+    script.add_action("input", ControlActorsAction2(keyboard_service))
     script.add_action("update", MoveActorsAction())
     script.add_action("update", HandleCollisionsAction())
     script.add_action("output", DrawActorsAction(video_service))
