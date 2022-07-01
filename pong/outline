@@ -1,0 +1,23 @@
+# Tim:
+    # Class Handle_collisions
+        # Handle top and bottom collision
+        # Handle Paddle collision
+        # Handle out of bounds/score
+
+# Promise:
+    # Keyboard Service
+    # Paddle Class
+        # Inherit snake and make changes
+
+# Robert:
+    # Director Class
+    # Goal Post
+        # Draw a goal
+        # Only gain a point if the ball hits the goal.
+        # Change color when you score
+
+# Kevin:
+    # Actor class
+        # Same as before but code to handle 3d movement
+
+# Point, color, score, script, action, move_action, and video_service can all be reused in this program.
