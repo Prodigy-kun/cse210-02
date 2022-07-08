@@ -80,10 +80,12 @@ class Actor:
     def move_x(self):
         x = self._position.get_x() + self._velocity.get_x()
         y = self._position.get_y()
+        self._position = Point(x, y)
     
     def move_y(self):
         x = self._position.get_x()
         y = self._position.get_y() + self._velocity.get_y()
+        self._position = Point(x, y)
 
     def set_color(self, color):
         """Updates the color to the given one.
