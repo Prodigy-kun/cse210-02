@@ -23,14 +23,14 @@ FIELD_LEFT = 0
 FIELD_RIGHT = SCREEN_WIDTH
 
 # FONT
-FONT_FILE = "cse210-02/pong/assets/fonts/zorque.otf"
+FONT_FILE = pathlib.Path("cse210-02/pong/assets/fonts/zorque.otf")
 FONT_SMALL = 32
 FONT_LARGE = 48
 
 # SOUND
-BOUNCE_SOUND = "cse210-02/pong/assets/sounds/boing.wav"
-SCORE_SOUND = "cse210-02/pong/assets/sounds/point_gain.mp3"
-OVER_SOUND = "cse210-02/pong/assets/sounds/win.mp3"
+BOUNCE_SOUND = pathlib.Path("cse210-02/pong/assets/sounds/boing.wav")
+SCORE_SOUND = pathlib.Path("cse210-02/pong/assets/sounds/point_gain.mp3")
+OVER_SOUND = pathlib.Path("cse210-02/pong/assets/sounds/win.mp3")
 
 # TEXT
 ALIGN_CENTER = 0
@@ -90,7 +90,7 @@ SCORE_L_FORMAT = "PLAYER 2 SCORE: {}"
 
 # BALL
 BALL_GROUP = "balls"
-BALL_IMAGE = "cse210-02/pong/assets/images/ball.png"
+BALL_IMAGE = pathlib.Path("cse210-02/pong/assets/images/ball.png")
 BALL_WIDTH = 28
 BALL_HEIGHT = 28
 BALL_VELOCITY = 6
@@ -98,8 +98,8 @@ BALL_VELOCITY = 6
 # PADDLES
 PADDLE_R_GROUP = "paddles_r"
 PADDLE_L_GROUP = "paddles_l"
-PADDLE_IMAGE_L = "cse210-02/pong/assets/images/pong_l.png"
-PADDLE_IMAGE_R = "cse210-02/pong/assets/images/pong_r.png"
+PADDLE_IMAGE_L = pathlib.Path("cse210-02/pong/assets/images/pong_l.png")
+PADDLE_IMAGE_R = pathlib.Path("cse210-02/pong/assets/images/pong_r.png")
 PADDLE_WIDTH = 28
 PADDLE_HEIGHT = 106
 PADDLE_RATE = 6
