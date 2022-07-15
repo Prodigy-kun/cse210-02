@@ -25,14 +25,14 @@ FIELD_LEFT = 0
 FIELD_RIGHT = SCREEN_WIDTH
 
 # FONT
-FONT_FILE = pathlib.PurePath("pong/assets/fonts/zorque.otf")
+FONT_FILE = pathlib.PurePath("cse210-02/pong/assets/fonts/zorque.otf")
 FONT_SMALL = 32
 FONT_LARGE = 48
 
 # SOUND
-BOUNCE_SOUND = pathlib.PurePath("pong/assets/sounds/boing.wav")
-SCORE_SOUND = pathlib.PurePath("pong/assets/sounds/point_gain.mp3")
-OVER_SOUND = pathlib.PurePath("pong/assets/sounds/win.mp3")
+BOUNCE_SOUND = pathlib.PurePath("cse210-02/pong/assets/sounds/boing.wav")
+SCORE_SOUND = pathlib.PurePath("cse210-02/pong/assets/sounds/point_gain.mp3")
+OVER_SOUND = pathlib.PurePath("cse210-02/pong/assets/sounds/win.mp3")
 
 # TEXT
 ALIGN_CENTER = 0
@@ -91,11 +91,11 @@ SCORE_R_FORMAT = "PLAYER 1 SCORE: {}"
 SCORE_L_FORMAT = "PLAYER 2 SCORE: {}"
 #MIDDLE
 MIDDLE_GROUP = 'middle'
-MIDDLE_IMAGE = pathlib.Path('CSE210-02/pong/assets/images/middle_1.png')
+MIDDLE_IMAGE = pathlib.Path('cse210-02/pong/assets/images/middle_1.png')
 MIDDLE_HEIGHT = SCREEN_HEIGHT
 # BALL
 BALL_GROUP = "balls"
-BALL_IMAGE = pathlib.PurePath("pong/assets/images/ball.png")
+BALL_IMAGE = pathlib.PurePath("cse210-02/pong/assets/images/ball.png")
 BALL_WIDTH = 28
 BALL_HEIGHT = 28
 BALL_VELOCITY = 6
@@ -104,13 +104,13 @@ BALL_VELOCITY = 6
 PADDLE_R_GROUP = "paddles_r"
 PADDLE_L_GROUP = "paddles_l"
 
-PADDLE_COLOR_L = ["pong/assets/images/pong_l.png","pong/assets/images/pong_l1.png","pong/assets/images/pong_l2.png", "pong/assets/images/pong_l3.png", "pong/assets/images/pong_l4.png"]
+PADDLE_COLOR_L = ["cse210-02/pong/assets/images/pong_l.png","cse210-02/pong/assets/images/pong_l1.png","cse210-02/pong/assets/images/pong_l2.png", "cse210-02/pong/assets/images/pong_l3.png", "cse210-02/pong/assets/images/pong_l4.png"]
 
-PADDLE_COLOR_R = ["pong/assets/images/pong_r.png","pong/assets/images/pong_r1.png","pong/assets/images/pong_r2.png", "pong/assets/images/pong_r3.png", "pong/assets/images/pong_r4.png"]
+PADDLE_COLOR_R = ["cse210-02/pong/assets/images/pong_r.png","cse210-02/pong/assets/images/pong_r1.png","cse210-02/pong/assets/images/pong_r2.png", "cse210-02/pong/assets/images/pong_r3.png", "cse210-02/pong/assets/images/pong_r4.png"]
 
 
-PADDLE_IMAGE_L = pathlib.PurePath("pong/assets/images/pong_l.png")
-PADDLE_IMAGE_R = pathlib.PurePath("pong/assets/images/pong_r.png")
+PADDLE_IMAGE_L = pathlib.PurePath("cse210-02/pong/assets/images/pong_l.png")
+PADDLE_IMAGE_R = pathlib.PurePath("cse210-02/pong/assets/images/pong_r.png")
 
 PADDLE_WIDTH = 28
 PADDLE_HEIGHT = 106
