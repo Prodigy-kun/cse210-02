@@ -1,4 +1,4 @@
-from pathlib import Path
+from pathlib import PurePath
 from scripting.action import Action
 
 
@@ -9,7 +9,7 @@ class LoadAssetsAction(Action):
         self._video_service = video_service
 
     def execute(self, cast, script, callback):
-        self._audio_service.load_sounds(Path("cse210-02/pong/assets/sounds"))
-        self._video_service.load_fonts(Path("cse210-02/pong/assets/fonts"))
-        self._video_service.load_images(Path("cse210-02/pong/assets/images"))
+        self._audio_service.load_sounds(PurePath("pong/assets/sounds"))
+        self._video_service.load_fonts(PurePath("pong/assets/fonts"))
+        self._video_service.load_images(PurePath("pong/assets/images"))
         

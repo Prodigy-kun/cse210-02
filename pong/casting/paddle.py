@@ -32,6 +32,9 @@ class Paddle(Actor):
             An instance of Body.
         """
         return self._body
+    
+    def set_image(self, filename):
+        self._image = filename
 
     def move_next(self):
         """Moves the bat using its velocity."""

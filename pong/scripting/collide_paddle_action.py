@@ -1,6 +1,7 @@
 from constants import *
 from casting.sound import Sound
 from scripting.action import Action
+from casting.image import Image
 
 
 class CollidePaddleAction(Action):
@@ -18,10 +19,16 @@ class CollidePaddleAction(Action):
         paddle_r_body = paddle_r.get_body()
         paddle_l_body = paddle_l.get_body()
 
-        if self._physics_service.has_collided(ball_body, paddle_r_body) or self._physics_service.has_collided(ball_body, paddle_l_body):
+        if self._physics_service.has_collided(ball_body, paddle_r_body):
             ball.bounce_x()
             sound = Sound(BOUNCE_SOUND)
             self._audio_service.play_sound(sound)
+            paddle_r.set_image(Image(f"{PADDLE_COLOR_R[randint(0, 4)]}"))
+        if self._physics_service.has_collided(ball_body, paddle_l_body):
+            ball.bounce_x()
+            sound = Sound(BOUNCE_SOUND)
+            self._audio_service.play_sound(sound)
+            paddle_l.set_image(Image(f"{PADDLE_COLOR_L[randint(0, 4)]}"))
         if self._physics_service.is_above(paddle_r_body, ball_body) or self._physics_service.is_above(paddle_l_body, ball_body):
             ball.bounce_x()
             sound = Sound(BOUNCE_SOUND)
