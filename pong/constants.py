@@ -1,4 +1,5 @@
 import pathlib
+from re import M
 from casting.color import Color
 from random import randint
 
@@ -88,7 +89,10 @@ SCORE_R_GROUP = "score_r"
 SCORE_L_GROUP = "score_l"
 SCORE_R_FORMAT = "PLAYER 1 SCORE: {}"
 SCORE_L_FORMAT = "PLAYER 2 SCORE: {}"
-
+#MIDDLE
+MIDDLE_GROUP = 'middle'
+MIDDLE_IMAGE = pathlib.Path('CSE210-02/pong/assets/images/middle_1.png')
+MIDDLE_HEIGHT = SCREEN_HEIGHT
 # BALL
 BALL_GROUP = "balls"
 BALL_IMAGE = pathlib.PurePath("pong/assets/images/ball.png")

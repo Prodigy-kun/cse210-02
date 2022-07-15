@@ -64,11 +64,11 @@ class CollideBordersAction(Action):
             cast.add_actor(BALL_GROUP, ball)
             time.sleep(1)
             ball.release()
-        if y < FIELD_TOP:
+        if y <= FIELD_TOP:
             ball.bounce_y()
             self._audio_service.play_sound(bounce_sound)
             
-        if y > FIELD_BOTTOM:
+        if y >= (FIELD_BOTTOM-(BALL_WIDTH+20)):
             ball.bounce_y()
             self._audio_service.play_sound(bounce_sound)
         
